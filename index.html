@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        TASK :
+       <p>Write a program to check whether the number is positive, negative, or zero. Additionally, if the number is
+        positive, check if it is even or odd.
+        eg: num=6
+        positive,even</p> 
+
+
+       <p>
+        write a program to add two numbers if only both are even numbers
+        eg:n1=4 n2=6 //o/p=10
+        n1=5 n2=4 // not valid
+       </p>
+
+
+        <p>
+         Write a program with a num prints the multiplication table for that number from 1 to 10 using a loop.
+
+        eg:n=5
+        output:
+        5 * 1 = 5
+        5 * 2 = 10
+        </p>
+
+    </div>
+    <script>
+        // Write a program to check whether the number is positive, negative, or zero. Additionally, if the number is positive, check if it is even or odd.
+        // eg: num=6 positive,even!
+
+        var num = -2;
+        if (num > 0) {
+            console.log(num + " is positive");
+            if (num % 2 == 0) {
+                console.log(num + " is even");
+            } else {
+                console.log(num + " is odd");
+            }
+        } else if (num < 0) {
+            console.log(num + " is negative");
+        } else {
+            console.log(" value is zero");
+        }
+        // Output: -2 is negative
+
+
+
+        // write a program to add two numbers if only both are even numbers eg:n1=4 n2=6  //o/p=10 n1=5 n2=4 // not valid
+
+        var n1 = 2;
+        var n2 = 2;
+        if (n1 % 2 == 0 && n2 % 2 == 0) {
+            var add = n1 + n2;
+            console.log("Sum of Two Even Nums " + add);
+        } else {
+            console.log("Not Valid");
+        }
+        // Output: Sum of Two Even Nums 4
+
+        // By using function
+
+        function sumOfEven(n1, n2) {
+            if (n1 % 2 == 0 && n2 % 2 == 0) {
+                var add = n1 + n2;
+                console.log("Sum of Two Even Nums " + add);
+            } else {
+                console.log("Not Valid");
+            }
+        }
+        sumOfEven(5, 6);
+        sumOfEven(2, 2);
+        // Output: Not Valid
+
+
+
+        // Write a program with a num prints the multiplication table for that number from 1 to 10 using a loop. eg:n=5
+        // output:5 * 1 = 5
+        //    5 * 2 = 10
+        //    5 * 3 = 15
+        //    5 * 4 = 20
+
+        var n = 5;
+        for (var i = 1; i <= 10; i++) {
+            console.log(n + " * " + i + " = " + (n * i));
+        }
+        // Output: 5 * 1 = 5
+
+        var i = 1;
+        var n = 3;
+        while (i <= 10) {
+            console.log(n + " * " + i + " = " + (n * i));
+            i++;
+        }
+        // Output: 3 * 1 = 3
+
+        function numMultiply(n, i) {
+            console.log("TABELS IN MATHS")
+            for (var i = 1; i <= 10; i++) {
+                result = n * i;
+                console.log(n + " * " + i + " = " + result);
+            }
+
+        }
+        numMultiply(4);
+        numMultiply(2);
+        numMultiply(20);
+
+
+
+        n = 10;
+        for (var i = 1; i < n; i++) {
+            for (j = 1; j <= 10; j++) {
+                console.log(i + "X " + j + " = " + (i * j));
+            }
+        }
+
+
+        // write a program to check whether the number is prime or not. eg: num=7 prime
+        var num = 10;
+        var flag = true;
+        for (var i = 2; i < num; i++) {
+            if (num % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            console.log(num + " is prime");
+        } else {
+            console.log(num + " is not prime");
+        }
+        // Output: 7 is prime
+    </script>
+</body>
+
+</html>
